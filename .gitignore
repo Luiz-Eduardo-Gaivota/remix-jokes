@@ -1,3 +1,4 @@
+# dependencies
 node_modules
 
 /.cache
@@ -5,3 +6,9 @@ node_modules
 /public/build
 /prisma/dev.db
 .env
+
+# testing
+/coverage
+junit.xml
+test-report.xml
+
