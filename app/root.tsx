@@ -89,7 +89,8 @@ function Document({
   return (
     <html lang="en">
       <head>
-        <Meta /> <title>{title}</title>
+        <Meta />
+        <title>{title}</title>
         <link rel="manifesto" href="/resources/manifest.webmanifest" />
         <Links />
       </head>
