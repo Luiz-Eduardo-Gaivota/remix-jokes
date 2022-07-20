@@ -8,7 +8,7 @@ import {
   useTransition,
 } from "@remix-run/react";
 
-import { JokeDisplay } from "~/components/joke";
+import { JokeDisplay } from "~/components/Joke";
 import { db } from "~/utils/db.server";
 import { requireUserId, getUserId } from "~/utils/session.server";
 

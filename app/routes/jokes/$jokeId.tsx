@@ -9,7 +9,7 @@ import type { Joke } from "@prisma/client";
 
 import { db } from "~/utils/db.server";
 import { getUserId, requireUserId } from "~/utils/session.server";
-import { JokeDisplay } from "~/components/joke";
+import { JokeDisplay } from "~/components/Joke";
 
 export const meta: MetaFunction = ({
   data,
