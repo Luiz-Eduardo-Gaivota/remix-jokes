@@ -8,7 +8,7 @@ module.exports = {
   setupFilesAfterEnv: ["./jest.setup.ts"],
   testEnvironment: "jsdom",
   moduleFileExtensions: [...defaults.moduleFileExtensions, "ts", "tsx"],
-  testPathIgnorePatterns: ["node_modules/"],
+  testPathIgnorePatterns: ["node_modules/", "app/utils/test/"],
   transformIgnorePatterns: ["node_modules"],
   transform: {
     "^.+\\.tsx?$": "ts-jest",

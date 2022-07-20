@@ -1,7 +1,7 @@
 import { screen } from "@testing-library/react";
 import { JokeDisplay } from "./index";
 import type { Joke } from "@prisma/client";
-import { render } from "../../utils/tests";
+import { render } from "../../utils/test";
 
 describe("components/JokeDisplay", () => {
   const MOCK_JOKE: Pick<Joke, "content" | "name"> = {
