@@ -12,9 +12,11 @@ import {
 import globalStylesUrl from "./styles/global.css";
 import globalMediumStylesUrl from "./styles/global-medium.css";
 import globalLargeStylesUrl from "./styles/global-large.css";
+import { ConnectivityProvider } from "./context/Connectivity";
 let isMount = true;
 export const links: LinksFunction = () => {
   return [
+    { rel: "manifesto", href: "/resources/manifest.webmanifest" },
     { rel: "stylesheet", href: globalStylesUrl },
     {
       rel: "stylesheet",
@@ -91,7 +93,6 @@ function Document({
       <head>
         <Meta />
         <title>{title}</title>
-        <link rel="manifesto" href="/resources/manifest.webmanifest" />
         <Links />
       </head>
       <body>
@@ -100,13 +101,17 @@ function Document({
     </html>
   );
 }
+
 export default function App() {
   return (
-    <Document>
-      <Outlet />
-    </Document>
+    <ConnectivityProvider>
+      <Document>
+        <Outlet />
+      </Document>
+    </ConnectivityProvider>
   );
 }
+
 export function CatchBoundary() {
   const caught = useCatch();
   return (
