@@ -3,7 +3,7 @@ import { json } from "@remix-run/node";
 import { useLoaderData, Link, useCatch } from "@remix-run/react";
 import type { Joke } from "@prisma/client";
 
-import { db } from "~/utils/db.server";
+import { db } from "../../utils/db.server";
 
 type LoaderData = { randomJoke: Joke };
 

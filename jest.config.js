@@ -1,15 +1,15 @@
 // eslint-disable-next-line @typescript-eslint/no-var-requires
-const { installGlobals } = require("@remix-run/node");
+// const { installGlobals } = require("@remix-run/node");
 const { defaults } = require("jest-config");
-installGlobals();
+// installGlobals();
 
 module.exports = {
   roots: ["./app"],
   setupFilesAfterEnv: ["./jest.setup.ts"],
   testEnvironment: "jsdom",
   moduleFileExtensions: [...defaults.moduleFileExtensions, "ts", "tsx"],
-  testPathIgnorePatterns: ["node_modules/", "app/utils/test/"],
-  transformIgnorePatterns: ["node_modules"],
+  testPathIgnorePatterns: ["node_modules/"],
+  transformIgnorePatterns: ["node_modules/(?!@remix-run/.*)"],
   transform: {
     "^.+\\.tsx?$": "ts-jest",
   },
